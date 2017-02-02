@@ -1,5 +1,27 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<nav class="navbar navbar-full navbar-dark bg-primary">
+  <div class="container">
+    {{#link-to 'application' class='navbar-brand'}}Relationship{{/link-to}}
+  </div>
+</nav>
 
-{{outlet}}
+<div class="container main-wrapper">
+  <div class="row">
+    <nav class="col-sm-2">
+      <ul class="nav nav-stacked flex-column">
+        <li class="nav-item">
+          {{#link-to 'users' class='nav-link'}}Users{{/link-to}}
+        </li>
+        <li class="nav-item">
+          {{#link-to 'application' class='nav-link'}}Friends{{/link-to}}
+        </li>
+      </ul>
+    </nav>
+    <section id="main" class="col-sm-7">
+      {{outlet}}
+    </section>
+    <aside class="col-sm-3">
+    </aside>
+  </div>
+
+
+</div>
