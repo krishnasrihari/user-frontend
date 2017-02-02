@@ -1,0 +1,40 @@
+<h2>User Details</h2>
+{{#link-to 'users.edit' model}}Edit{{/link-to}}
+<a href="#" {{action "delete" model}}>Delete</a>
+
+<p>{{model.firstName}}</p>
+
+<p> {{model.lastName}}</p>
+
+<h3>Friends </h3>
+{{#link-to 'users.friend'}} Add Friend {{/link-to}}
+<table class="table table-striped table-sm">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model.friends as |friend|}}
+      <tr>
+        <td>{{friend.firstName}}</td>
+        <td>{{friend.lastName}}</td>
+        <td>{{friend.email}}</td>
+      </tr>
+    {{else}}
+      <tr>
+        <td colspan="5" style="text-align: center; font-style: italic">
+          You have no friends yet.
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+
+
+
+
+
