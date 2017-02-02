@@ -5,7 +5,8 @@ User = DS.Model.extend
 	lastName: DS.attr 'string'
 	email: DS.attr 'string'
 
-	friendships: DS.hasMany 'friendship'
+	friendships: DS.hasMany('friendship')
+	friends: DS.hasMany('user')
 
 
 `export default User`

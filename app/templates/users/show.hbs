@@ -16,12 +16,12 @@
       <th>Email</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody>    
     {{#each model.friends as |friend|}}
       <tr>
         <td>{{friend.firstName}}</td>
-        <td>{{friend.lastName}}</td>
-        <td>{{friend.email}}</td>
+        <td>{{friend.lastName}}</td>        
+        <td>{{friend.email}}</td>        
       </tr>
     {{else}}
       <tr>
