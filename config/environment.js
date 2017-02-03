@@ -44,7 +44,7 @@ module.exports = function(environment) {
     }
 
     if (environment === 'production') {
-
+        ENV.apiHost = 'https://morning-forest-10892.herokuapp.com/api';
     }
 
     return ENV;
