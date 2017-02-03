@@ -5,5 +5,6 @@ Friendship = DS.Model.extend
 	friendId: DS.attr 'string'
 
 	user: DS.belongsTo('user', {inverse: 'friendships'})
+	friend: DS.belongsTo('friend')
 
 `export default Friendship`
